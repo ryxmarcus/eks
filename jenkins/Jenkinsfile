@@ -45,7 +45,7 @@ pipeline {
             steps{
                 script{
                     dir('terraform'){
-                         sh 'terraform destroy -auto-approve || (echo "Terraform apply failed!" && exit 1)'
+                         sh 'terraform apply -auto-approve || (echo "Terraform apply failed!" && exit 1)'
                     }
                 }
             }
